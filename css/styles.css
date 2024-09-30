@@ -1,0 +1,308 @@
+*, *::before,:after{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html{
+    font-size: 1rem;
+}
+
+main > .meet-icon{
+    display: flex;
+    
+    justify-content: center;
+    padding: .9em 0;
+    
+}
+main > .meet-icon img{
+    width: 7.375rem;
+}
+main section .hero{
+    display: grid;
+    grid-template-columns: repeat(3,fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-template-areas:  
+    
+    "hero-left hero-main hero-right";
+}
+main section .hero .hero-left{
+    grid-area: hero-left;
+}
+
+
+main section .hero .hero-main{
+    grid-area: hero-main;
+}
+main section .hero .hero-right{
+    grid-area: hero-right;
+}
+main section .hero .hero-left img, .main section .hero .hero-right img{
+    width: 24.625rem;
+}
+
+
+main section .hero .hero-main{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 11em;
+}
+main section .hero .hero-buttons{
+
+    min-width: 100%;
+    padding:0 0 10px 10px;
+
+}
+
+main section .hero .hero-main h1{
+    text-transform: capitalize;
+    font-size: 4rem;
+    text-align: center;
+}
+main section .hero .hero-main p{
+    opacity: 70%;
+    font-size: .8em;
+    text-align: center;
+}
+main section .hero .hero-main .hero-buttons{
+    display: flex;
+  
+    width: 80%;
+    justify-content: space-between;
+}
+
+main section .hero .hero-main .hero-buttons button{
+   width: 193px; 
+   padding: 15px;
+   margin: 10px 10px 0 0 ;
+   font-size: .9rem;
+   color: #fafafa;
+   border-radius: 15px;
+   border: none;
+}
+main section .hero .hero-main .hero-buttons button:nth-of-type(1){
+    background-color: #4D96A9;
+}
+main section .hero .hero-main .hero-buttons button:nth-of-type(1) span{
+   color: #8FE3F9;
+}
+main section .hero .hero-main .hero-buttons button:nth-of-type(2){
+    background-color: #855FB1;
+}
+
+article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  7rem 0 ;
+}
+
+article .article-images{
+
+    max-width:1120px;
+    
+    display: flex;
+    justify-content: center;
+   
+    width: 100%;
+    gap: 15px;
+}
+article .article-images img{
+    max-width: 256px;
+    
+     border-radius: 10px;
+    
+}
+
+article .article-description{
+    width: 544px;
+    
+    padding:5em 5em;
+    text-align: center;
+}
+article .article-description h1{
+    font-size: 40px;
+
+}
+article .article-description h2{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #4D96A9;
+}
+footer{
+    height: 212px;
+
+  
+    background-image: url(/starter-code/assets/desktop/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+footer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77,150,169, 0.5);
+    z-index: 99;
+}
+footer .footer-details{
+    display: flex;
+    padding-top:5em;
+    justify-content: space-around;
+    color:white;
+    font-weight: 900;
+    z-index: 999;
+    position: relative;
+}
+
+footer .footer-details div:nth-last-of-type(1){
+    font-size: 1rem;
+    max-width: 445px;
+}
+footer .footer-details div:nth-last-of-type(2){
+    max-width: 355px;
+    font-size: 18px;
+    font-weight:500;
+}
+footer .footer-details div:nth-last-of-type(3){
+    max-width: 193px;
+    
+}
+footer .footer-details div:nth-of-type(3) button{
+    
+    width: 193px; 
+    padding: 15px;
+    margin: 10px 10px 0 0 ;
+    font-size: .9rem;
+    background-color: #855FB1;
+    border-radius: 15px;
+    border: none;
+    color: white;
+}
+footer .footer-details div:nth-of-type(3) button span{
+
+    color: #8FE3F9;
+}
+
+@media screen and (max-width: 1024px)  {
+   
+    main{
+        border: 1px solid;
+        /* max-width: 100vw; */
+    }
+    main section .hero {
+        max-width: 100%;
+     
+        padding-left:3em;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+            "hero-left"
+            "hero-main";
+        gap: 1.3em;
+        text-align: center;
+    }
+
+    main section .hero .hero-main {
+     
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    main section .hero .hero-main {
+        padding:2em; 
+    }
+    main section .hero .hero-main h1 {
+        font-size: 2rem; /* Smaller font size for smartphones */
+    }
+    main section .hero .hero-main .hero-buttons{
+        display: flex;
+        flex-direction: column;
+       
+   
+        align-items: center;
+        
+    }
+
+
+    
+    main article .article-description h2{
+        font-size: .9rem;
+    }
+    main article .article-description h1 {
+        font-size: 2.3rem;
+        padding: 10px;
+    }
+    
+    main > article .article-images img{
+  
+        width: 25%;
+
+    }
+    footer .footer-details {
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+        text-align: center;
+    }
+    article .article-images {
+        gap: .3em;
+        padding-inline: 13px;
+    }
+    main section .hero .hero-right img{
+        display: none;
+    }
+}
+@media screen and (min-width: 762px) {
+    main section .hero .hero-main .hero-buttons{
+        max-width: 50%;
+ 
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Larger Screens (min-width: 1025px) */
+@media screen and (min-width: 968px) {
+    main section .hero {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+        grid-template-rows: auto;
+        justify-content: center;
+        grid-template-areas:
+            "hero-left hero-main hero-right";
+        gap: 2em;
+    }
+    main section .hero .hero-main {
+        padding: 1em 11em; /* Generous padding for larger screens */
+    }
+    main section .hero .hero-main h1 {
+        font-size: 4rem; /* Full font size */
+    }
+    main section .hero .hero-buttons button {
+        width: 193px; /* Maintain fixed width for buttons */
+    }
+    article .article-description h1 {
+        font-size: 40px;
+    }
+    main section .hero .hero-right {
+        grid-area: hero-right;
+        display: block; /* Ensure it’s visible */
+    }
+    main section .hero .hero-right img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    
+}
