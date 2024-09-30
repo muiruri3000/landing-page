@@ -133,7 +133,7 @@ article .article-description h2{
     color: #4D96A9;
 }
 footer{
-    height: 212px;
+    min-height: 312px;
 
   
     background-image: url(/starter-code/assets/desktop/image-footer.jpg);
@@ -141,7 +141,12 @@ footer{
     background-size: cover;
     position: relative;
 }
-
+footer img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
 footer::before{
     content: '';
     position: absolute;
@@ -154,7 +159,7 @@ footer::before{
 }
 footer .footer-details{
     display: flex;
-    padding-top:5em;
+    padding-top:10em;
     justify-content: space-around;
     color:white;
     font-weight: 900;
